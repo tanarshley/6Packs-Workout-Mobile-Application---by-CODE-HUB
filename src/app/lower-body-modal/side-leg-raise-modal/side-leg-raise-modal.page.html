@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-back-outline" defaultHref="/tabs/workout" (click)="closeModal()"></ion-back-button>
+    </ion-buttons>
+    <ion-icon slot="end" class="exit-exercise-ico" name="close-outline" (click)="exitExercise()"></ion-icon>
+    <ion-title>Side Leg Raises</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img src="/assets/images/workout-gifs/side-leg-raises.gif">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <p><strong>Level:</strong> 1</p>
+          </ion-col>
+          <ion-col>
+            <p><strong>Sets:</strong> 3</p>
+          </ion-col>
+          <ion-col>
+            <p><strong>Repeat:</strong> 40x</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p><strong>Difficulty:</strong>
+                <ion-chip color="primary">
+                  <ion-label>Normal</ion-label>
+                </ion-chip>
+             </p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p><strong>Target Body Parts:</strong> Obliques, hips and abdominals</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <br>
+      <ion-card-title>
+        <strong>Instructions</strong>
+      </ion-card-title>
+      <ol>
+        <li>Lay on your side and support your upper body with your elbow.</li>
+        <li>Raise the upper leg so that it is not touching the other leg. Keep the abs tight.</li>
+        <li>Slowly raise your leg 45 degrees while contracting the abdominal muscles.</li>
+        <li>Hold for 2 seconds, then slowly return to starting position.</li>
+        <li>Repeat for the other side until the set is complete.</li>
+      </ol><br>
+      <ion-chip color="secondary" class="time-chip">
+        <ion-label><ion-icon name="time-outline" class="time-icon"></ion-icon> 1-2 minutes rest between sets.</ion-label>
+      </ion-chip><br><br>
+      <ion-label>
+        Progress:
+      </ion-label>
+      <ion-progress-bar value="0.00" buffer="0.17"></ion-progress-bar>
+      </ion-card-content>
+      <ion-button color="success" (click)="nextExercise()" expand="block" mode="ios">Next Exercise</ion-button>
+  </ion-card>
+</ion-content>

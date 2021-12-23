@@ -1,0 +1,30 @@
+ion-title{
+  --ion-font-family: 'barlow-font-lighter';
+}
+
+
+a{
+  float: left;
+  position: relative;
+  margin-left: 10px;
+}
+
+a {
+  ion-icon{
+    font-size: 22px;
+  }
+}
+
+p{
+  justify-content: left;
+  text-align: justify;
+  margin: 15px;
+}
+
+ion-button{
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 7px;
+}
+
+

@@ -1,0 +1,21 @@
+.segment-label{
+  font-size: 14px;
+}
+
+ion-toolbar{
+  --ion-font-family: 'barlow-font-lighter';
+}
+
+img{
+  padding: 0;
+  margin: 0;
+}
+
+ion-card{
+  border-radius: 12px;
+}
+
+.segment-content ion-button{
+  --border-radius: 8px !important;
+  --box-shadow: none;
+}

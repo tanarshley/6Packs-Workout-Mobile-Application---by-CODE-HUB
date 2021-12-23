@@ -1,0 +1,19 @@
+ion-toolbar{
+  --ion-font-family: 'barlow-font-lighter';
+}
+
+img{
+  display: flex;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+}
+
+ion-content{
+  align-items: center;
+  text-align: center;
+}
+
+ion-label{
+  color: rgb(161, 161, 161);
+}

@@ -1,0 +1,99 @@
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title class="ion-text-center">Profile</ion-title>
+    </ion-toolbar>
+  </ion-header>
+<br>
+  <div class="profile-selection">
+    <ion-avatar class="avatar">
+      <img src="/assets/photos/profile.jpg">
+    </ion-avatar>
+    <h4 class="ion-text-center">{{ fullname }}</h4>
+  </div>
+    <br>
+  <div class="personal-information">
+
+    <ion-segment [(ngModel)]='selectTabs'>
+        <ion-segment-button value="personal">
+          <ion-label class="segment-label">Personal Information</ion-label>
+        </ion-segment-button>
+
+        <ion-segment-button value="settings">
+          <ion-label class="segment-label">Account Settings</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+
+    <div class="segment-content-personal" *ngIf="selectTabs === 'personal'">
+    <ion-card class="user-information">
+      <ion-list>
+        <ion-item class="list-title">
+          <h3>Personal Information</h3>
+          <ion-icon class="personal-icon" name="person-circle-outline" slot="end"></ion-icon>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Username</ion-label>
+          <ion-chip color="secondary">
+              <ion-label class="user-usename">{{ username }}</ion-label>
+          </ion-chip>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Birth Date</ion-label>
+          <ion-chip color="secondary">
+              <ion-label class="user-date">{{ birthdate }}</ion-label>
+          </ion-chip>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Email</ion-label>
+          <ion-chip color="secondary">
+              <ion-label class="user-email">{{ email }}</ion-label>
+          </ion-chip>
+        </ion-item>
+
+      </ion-list>
+    </ion-card>
+    </div>
+
+    <div class="segment-content" *ngIf="selectTabs === 'settings'">
+     <ion-card class="account-settings">
+      <ion-list>
+
+        <ion-item class="list-title">
+          <h3>Account Settings</h3>
+          <ion-icon class="settings-icon" name="settings-outline" slot="end"></ion-icon>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Username</ion-label>
+           <ion-input inputmode="text" [(ngModel)]="username"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Email Address</ion-label>
+          <ion-input inputmode="email" [(ngModel)]="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">MM/DD/YYYY</ion-label>
+          <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14" max="2003-12-31"
+          placeholder="Select Date" [(ngModel)]="birthdate"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+          <a (click)="deactModal()">Deactivate My Account</a>
+        </ion-item>
+
+        <ion-item>
+          <a (click)="verifyOldPassword()" defaultHref="/old-pass-entry">Change password</a>
+        </ion-item>
+        <br>
+        <ion-button (click)="updateinfo(account_id, username, email, birthdate)" mode="ios" color="light" expand="block"><ion-icon name="checkmark-outline" slot="start"></ion-icon>Save Changes</ion-button>
+      </ion-list>
+     </ion-card>
+    </div>
+  </div>
+  <ion-button (click)="logout()" color="danger" mode="ios" expand="block"><ion-icon name="log-out-outline"></ion-icon>&nbsp;Log Out</ion-button>
+</ion-content>

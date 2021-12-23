@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-back-outline" defaultHref="/tabs/workout" (click)="closeModal()"></ion-back-button>
+    </ion-buttons>
+    <ion-icon slot="end" class="exit-exercise-ico" name="close-outline" (click)="exitExercise()"></ion-icon>
+    <ion-title>Knee Push-Ups</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img src="/assets/images/workout-gifs/knee-push-up.gif">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <p><strong>Level:</strong> 1</p>
+          </ion-col>
+          <ion-col>
+            <p><strong>Sets:</strong> 3</p>
+          </ion-col>
+          <ion-col>
+            <p><strong>Repeat:</strong> 10x</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p><strong>Difficulty:</strong>
+                <ion-chip color="primary">
+                  <ion-label>Normal</ion-label>
+                </ion-chip>
+             </p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p><strong>Target Body Parts:</strong> abs, triceps, upper back, chest and shoulders</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <br>
+      <ion-card-title>
+        <strong>Instructions</strong>
+      </ion-card-title>
+      <ol>
+        <li>Place the knees on the floor, the hands below the shoulders, and cross your feet.</li>
+        <li>Keeping your back straight, start bending the elbows until your chest is almost touching the floor.</li>
+        <li>Pause and push back to the starting position.</li>
+        <li>Repeat until the set is complete.</li>
+      </ol><br>
+      <ion-chip color="secondary" class="time-chip">
+        <ion-label><ion-icon name="time-outline" class="time-icon"></ion-icon> 1-2 minutes rest between sets.</ion-label>
+      </ion-chip><br><br>
+      <ion-label>
+        Progress:
+      </ion-label>
+      <ion-progress-bar value="0.00" buffer="0.11"></ion-progress-bar>
+      </ion-card-content>
+      <ion-button color="success" (click)="nextExercise()" expand="block" mode="ios">Next Exercise</ion-button>
+  </ion-card>
+</ion-content>

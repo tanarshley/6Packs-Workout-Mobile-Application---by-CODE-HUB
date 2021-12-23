@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <a (click)="closeModal()">
+      <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+    </a>
+    <ion-title>Confirmation of Deactivation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p>
+    Deleting your account will lead to lost of your data and progress in the application. All your information will be
+    deleted. Once you deactivate your account, It can't be recover anymore.<br><br>
+    Are you sure that you want to deactivate your account? <br>
+  </p>
+  <ion-button (click)="deactivate(account_id)" mode="ios" color="danger" expand="block">Yes, deactivate my account</ion-button>
+  <ion-button (click)="closeModal()" mode="ios" color="light" expand="block">No, I change my decision</ion-button>
+</ion-content>

@@ -1,0 +1,65 @@
+.profile-section{
+  justify-content: center;
+  display: flex;
+}
+
+ion-toolbar{
+  --ion-font-family: 'barlow-font-lighter';
+}
+
+.avatar{
+  margin: auto;
+  width: 120px;
+  height: 120px;
+}
+
+ion-button{
+  padding-left: 8px;
+  padding-right: 8px;
+  --background: #F36C6C;
+}
+
+ion-label{
+  ion-item{
+    --ion-font-family: 'barlow-font-lighter';
+  }
+}
+
+.segment-label{
+  font-size: 14px;
+}
+
+ion-segment{
+  --ion-font-family: 'barlow-font-regular' !important;
+}
+
+.personal-icon, .settings-icon{
+  font-size: 35px;
+}
+
+.deact-icon{
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+ion-item{
+    a{
+      text-decoration: none !important;
+      color: black;
+   }
+}
+
+.list-title{
+  --border-color: white;
+}
+
+.current{
+  float: left;
+  margin-left: -18px;
+  ion-label{
+    float: left;
+    justify-content: left;
+    margin: 0;
+    padding: 0;
+  }
+}

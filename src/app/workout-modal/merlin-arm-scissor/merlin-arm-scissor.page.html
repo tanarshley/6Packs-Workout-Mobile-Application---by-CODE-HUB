@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-back-outline" defaultHref="/tabs/workout"></ion-back-button>
+    </ion-buttons>
+    <ion-icon slot="end" class="exit-exercise-ico" name="close-outline" (click)="exitExercise()"></ion-icon>
+    <ion-title>Arm Scissors</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+      <img src="/assets/images/workout-gifs/arm-scissors.gif">
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <p><strong>Level:</strong> 1</p>
+            </ion-col>
+            <ion-col>
+              <p><strong>Sets:</strong> 3</p>
+            </ion-col>
+            <ion-col>
+              <p><strong>Repeat:</strong> 20x</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p><strong>Difficulty:</strong>
+                  <ion-chip color="success">
+                    <ion-label>Easy</ion-label>
+                  </ion-chip>
+              </p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p><strong>Target Body Parts:</strong> Shoulders and arms</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <br>
+        <ion-card-title>
+          <strong>Instructions</strong>
+        </ion-card-title>
+        <ol>
+          <li>Stand up straight with your knees and form cross arm position (your right arm to the left and left arm to the right straightly).</li>
+          <li>Move both arms opposite to their position simultaneously. Make sure you move both arms straightly.</li>
+          <li>Repeat the two steps correctly until the set is complete.</li>
+        </ol><br>
+        <ion-chip color="secondary" class="time-chip">
+          <ion-label><ion-icon name="time-outline" class="time-icon"></ion-icon> 1-2 minutes rest between sets.</ion-label>
+        </ion-chip><br><br>
+        <ion-label>
+          Progress:
+        </ion-label>
+        <ion-progress-bar value="0.50" buffer="0.75"></ion-progress-bar>
+      </ion-card-content>
+      <ion-button color="success" (click)="nextExercise()" expand="block" mode="ios">Next Exercise</ion-button>
+    </ion-card>
+</ion-content>

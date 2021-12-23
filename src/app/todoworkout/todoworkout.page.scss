@@ -1,0 +1,47 @@
+ion-toolbar{
+  --ion-font-family: 'barlow-font-lighter';
+}
+
+.date{
+  float: right;
+  font-size: 14px !important;
+}
+
+.done{
+  width: 125px !important;
+}
+
+ion-title{
+  margin-left: 15px;
+}
+
+.refresh-btn{
+  float:right;
+  position: relative;
+  font-size: 28px;
+  margin-right: 15px;
+}
+
+ion-card-title{
+  --ion-font-family: 'barlow-font-regular';
+  font-size: 22px;
+}
+
+ion-card-content, ion-card-subtitle{
+  font-size: 16px;
+}
+
+ion-button{
+  float: right;
+  border: none !important;
+  --box-shadow:none;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  text-transform: none;
+  font-size: 14px;
+  --ion-font-family: 'barlow-font-lighter';
+}
+
+ion-icon{
+  font-size: 16px;
+}

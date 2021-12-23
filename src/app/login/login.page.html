@@ -1,0 +1,38 @@
+<ion-content>
+  <img src="/assets/app-icon/6packs-icon.png">
+  <h1 class="ion-text-center create">Sign In</h1>
+  <form [formGroup]="loginForm" ngNativeValidate (submit)="onSubmit($event)">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Username</ion-label>
+        <ion-input [(ngModel)]="name" inputmode="text" formControlName="username"></ion-input>
+      </ion-item>
+
+      <div *ngFor="let error of errormsgs.username">
+        <ng-container *ngIf="username.hasError(error.type) && (username.dirty || username.touched)">
+          <small class="error-message">{{error.message}}</small>
+        </ng-container>
+      </div>
+      <br>
+
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+
+      <div *ngFor="let error of errormsgs.password">
+        <ng-container *ngIf="password.hasError(error.type) && (password.dirty || password.touched)">
+          <small class="error-message">{{error.message}}</small>
+        </ng-container>
+      </div>
+      <ion-label class="forgot-link">
+        <a (click)=" forgotpass()">Forgot password?</a>
+      </ion-label>
+      <br><br><br>
+
+      <ion-button type="submit"  [disabled]="!loginForm.valid" expand="block" mode="ios">Login</ion-button><br>
+    </ion-list>
+    <ion-label class="create-link">Don't have any account? <a [routerLink]="['/signup']">Create here.</a></ion-label>
+  </form>
+
+</ion-content>

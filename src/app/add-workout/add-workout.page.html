@@ -1,0 +1,39 @@
+<<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-back-outline" defaultHref="/tabs/todoworkout" (click)="closeModal()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add New Plan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+  <ion-label position="floating">Exercise Title</ion-label>
+  <ion-input
+    type="text"
+    [(ngModel)]="workout_title"
+  ></ion-input>
+</ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Date</ion-label>
+    <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="workout_date"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Repetitions</ion-label>
+    <ion-input type="text" [(ngModel)]="workout_reps"></ion-input>
+  </ion-item>
+
+<ion-fab
+  horizontal="end"
+  style="position: absolute; bottom: 25px"
+  slot="fixed"
+  edge
+>
+  <ion-fab-button
+    ><ion-icon name="add-outline" (click)="add()"></ion-icon
+  ></ion-fab-button>
+</ion-fab>
+</ion-content>

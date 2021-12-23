@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-back-outline" defaultHref="/tabs/workout"></ion-back-button>
+    </ion-buttons>
+    <ion-icon slot="end" class="exit-exercise-ico" name="close-outline" (click)="exitExercise()"></ion-icon>
+    <ion-title>Plank Hold</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img src="/assets/images/workout/straight-arm-pank.jpg">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <p><strong>Level:</strong> 1</p>
+          </ion-col>
+          <ion-col>
+            <p><strong>Sets:</strong> 3</p>
+          </ion-col>
+          <ion-col>
+            <p><strong>Repeat:</strong> 15 counts</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p><strong>Difficulty:</strong>
+                <ion-chip color="danger">
+                  <ion-label>Hard</ion-label>
+                </ion-chip>
+             </p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p><strong>Target Body Parts:</strong> Oblique, core, abdominal and upper abs.</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <br>
+      <ion-card-title>
+        <strong>Instructions</strong>
+      </ion-card-title>
+      <ol>
+        <li>Start on all fours with wrists directly under shoulders, toes on the floor.</li>
+        <li>Then, step one foot back and then the other as you engage abs and straigthen legs.</li>
+        <li>Press the floor away from you with hands. You should form a straight line from shoulders to heels. Hold for 15 to 30 seconds.</li>
+        <li>Repeat until the set is complete.</li>
+      </ol><br>
+      <ion-chip color="secondary" class="time-chip">
+        <ion-label><ion-icon name="time-outline" class="time-icon"></ion-icon> 1-2 minutes rest between sets.</ion-label>
+      </ion-chip><br><br>
+      <ion-label>
+        Progress:
+      </ion-label>
+      <ion-progress-bar value="0.51" buffer="0.68"></ion-progress-bar>
+      </ion-card-content>
+      <ion-button color="success" (click)="nextExercise()" expand="block" mode="ios">Next Exercise</ion-button>
+  </ion-card>
+</ion-content>

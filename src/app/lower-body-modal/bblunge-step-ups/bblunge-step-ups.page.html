@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-back-outline" defaultHref="/tabs/workout"></ion-back-button>
+    </ion-buttons>
+    <ion-icon slot="end" class="exit-exercise-ico" name="close-outline" (click)="exitExercise()"></ion-icon>
+    <ion-title>Lunge Step Ups</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+      <img src="/assets/images/workout-gifs/step-up-knee-raise.gif">
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <p><strong>Level:</strong> 4</p>
+            </ion-col>
+            <ion-col>
+              <p><strong>Sets:</strong> 4</p>
+            </ion-col>
+            <ion-col>
+              <p><strong>Repeat:</strong> 14x</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p><strong>Difficulty:</strong>
+                  <ion-chip color="danger">
+                    <ion-label>Hard</ion-label>
+                  </ion-chip>
+              </p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p><strong>Target Body Parts:</strong> Quads, hamstrings and glutes</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <br>
+        <ion-card-title>
+          <strong>Instructions</strong>
+        </ion-card-title>
+        <ol>
+          <li>Place a box or a step in front of you and stand up straight.</li>
+          <li>Step onto the box with your left foot and drive your right knee up.</li>
+          <li>Step down with your right foot and switch legs until the 2 sets is complete.</li>
+        </ol><br>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-chip color="secondary">
+                <ion-label>2 sets per leg.</ion-label>
+              </ion-chip>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <ion-chip color="secondary"  class="time-chip">
+                <ion-label><ion-icon name="time-outline" class="time-icon"></ion-icon> 20 seconds rest per set.</ion-label>
+              </ion-chip>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+              <ion-col>
+                <ion-chip color="secondary" class="time-chip">
+                  <ion-label><ion-icon name="time-outline" class="time-icon"></ion-icon> 2 minutes rest between exercises.</ion-label>
+                </ion-chip>
+              </ion-col>
+          </ion-row>
+        </ion-grid>
+        <ion-label>
+          Progress:
+        </ion-label>
+        <ion-progress-bar value="0.50" buffer="0.75"></ion-progress-bar>
+      </ion-card-content>
+      <ion-button color="success" (click)="nextExercise()" expand="block" mode="ios">Next Exercise</ion-button>
+    </ion-card>
+</ion-content>

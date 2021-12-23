@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-icon class="refresh-btn" name="refresh-outline" (click)="refreshPage()"></ion-icon>
+    <ion-title class="ion-text-center">My Workout Plans</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let todo of todos; index as i" lines="none">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{ todo.workout_title}}</ion-card-title>
+          <ion-card-subtitle>Repetitions: {{todo.workout_reps}}</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-label class="date">Due: {{ todo.workout_date}}</ion-label><br>
+          <ion-button color="success" class="done" (click)="done(todo.workout_id,i)">Done</ion-button>
+        <ion-button color="light" (click)="edit(todo,i)">Edit</ion-button>
+          <ion-button color="light" (click)="delete(todo.workout_id,i)">Remove</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addWorkoutModal()">
+      <ion-icon name="add" defaultHref="/add-workout"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

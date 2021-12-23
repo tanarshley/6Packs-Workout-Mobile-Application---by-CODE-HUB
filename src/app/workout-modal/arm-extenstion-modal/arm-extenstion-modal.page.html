@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-back-outline" defaultHref="/tabs/workout"></ion-back-button>
+    </ion-buttons>
+    <ion-icon slot="end" class="exit-exercise-ico" name="close-outline" (click)="exitExercise()"></ion-icon>
+    <ion-title>Arm Extension: Arm Swing</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+      <img src="/assets/images/workout-gifs/arm-extension.gif">
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <p><strong>Level:</strong> 1</p>
+            </ion-col>
+            <ion-col>
+              <p><strong>Sets:</strong> 3</p>
+            </ion-col>
+            <ion-col>
+              <p><strong>Repeat:</strong> 10x</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p><strong>Difficulty:</strong>
+                  <ion-chip color="primary">
+                    <ion-label>Normal</ion-label>
+                  </ion-chip>
+              </p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p><strong>Target Body Parts:</strong> Shoulders and arms</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <br>
+        <ion-card-title>
+          <strong>Proper Form And Breathing Pattern</strong>
+        </ion-card-title>
+        <p class="proper-form">
+            Keep your abs tight and your back straight. Face forward, breathe slowly and use your muscles to
+            propel the movement. Your arms should swing in a steady and fluid motion, as close as possible to their full range
+            of motion.
+        </p>
+        <br>
+        <ion-card-title>
+          <strong>Instructions</strong>
+        </ion-card-title>
+        <ol>
+          <li>Stand up straight with your knees slightly bent, your feet shoulder-width apart and your arms stretched horizontally to the sides.</li>
+          <li>Cross your arms at the front and then quickly bring them back as far as you can.</li>
+          <li>Repeat this back and forth movement until the set is complete.</li>
+        </ol>
+        <br>
+        <ion-chip color="secondary" class="time-chip">
+          <ion-label><ion-icon name="time-outline" class="time-icon"></ion-icon> 1-2 minutes rest between sets.</ion-label>
+        </ion-chip><br><br>
+      <ion-label>
+        Progress:
+      </ion-label>
+      <ion-progress-bar value="0.11" buffer="0.22"></ion-progress-bar>
+      </ion-card-content>
+      <ion-button color="success" (click)="nextExercise()" expand="block" mode="ios">Next Exercise</ion-button>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,186 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Diet Plan & Tips</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>Smoothies <ion-icon name="wine-outline"></ion-icon></ion-list-header>
+    <ion-item>
+      <ion-slides [options]="option">
+        <ion-slide>
+          <ion-card>
+            <img src="/assets/images/diet/banana-smoothie.jpg">
+            <ion-card-header>
+              <ion-card-title>Banana</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Sure, there are fruits with deeper nutritional portf...
+              <a class="learn-more-link" (click)="bananaModal()">Read More<ion-icon name="chevron-forward-outline"></ion-icon></a>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <img src="/assets/images/diet/avocado-smoothie.jpg">
+            <ion-card-header>
+              <ion-card-title>Avocado</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Avocado might not be a traditional smoothie...
+              <a class="learn-more-link" (click)="avocadoModal()">Read More<ion-icon name="chevron-forward-outline"></ion-icon></a>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <img src="/assets/images/diet/spinach-mango-smoothie.jpg">
+            <ion-card-header>
+              <ion-card-title>Mango</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Avocado might not be a traditional smoothie...
+              <a class="learn-more-link" (click)="mangoModal()">Read More<ion-icon name="chevron-forward-outline"></ion-icon></a>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>Vegetables <ion-icon name="leaf-outline"></ion-icon></ion-list-header>
+    <ion-item>
+      <ion-slides [options]="option">
+        <ion-slide>
+          <ion-card>
+            <img src="/assets/images/diet/soybeans.jpg">
+            <ion-card-header>
+              <ion-card-title>Soybeans</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Soybeans are among the best vegetables in terms...
+              <a class="learn-more-link" (click)="soybeansModal()">Read More<ion-icon name="chevron-forward-outline"></ion-icon></a>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <img src="/assets/images/diet/edamame.jpg">
+            <ion-card-header>
+              <ion-card-title>Edamame</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Edamame is one of the greatest snacks or sid...
+              <a class="learn-more-link" (click)="endamameModal()">Read More<ion-icon name="chevron-forward-outline"></ion-icon></a>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <img src="/assets/images/diet/broccoli.jpg">
+            <ion-card-header>
+              <ion-card-title>Broccoli</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              If you are trying to cut fats or reduce your calories...
+              <a class="learn-more-link" (click)="broccoliModal()">Read More<ion-icon name="chevron-forward-outline"></ion-icon></a>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <img src="/assets/images/diet/spinach.jpg">
+            <ion-card-header>
+              <ion-card-title>Spinach</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              In just one cup of boiled spinach, you can get 5...
+              <a class="learn-more-link" (click)="spinachModal()">Read More<ion-icon name="chevron-forward-outline"></ion-icon></a>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <img src="/assets/images/diet/kale.jpg">
+            <ion-card-header>
+              <ion-card-title>Kale</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Very similar to spinach, kale is a great leafy gre...
+              <a class="learn-more-link" (click)="kaleModal()">Read More<ion-icon name="chevron-forward-outline"></ion-icon></a>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>Fruits <ion-icon name="nutrition-outline"></ion-icon></ion-list-header>
+    <ion-item>
+      <ion-slides [options]="option">
+        <ion-slide>
+          <ion-card>
+            <img src="/assets/images/diet/papaya.jpg">
+            <ion-card-header>
+              <ion-card-title>Papaya</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Is there any fruit better for you than papaya? Flood...
+              <a class="learn-more-link" (click)="papayaModal()">Read More<ion-icon name="chevron-forward-outline"></ion-icon></a>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <img src="/assets/images/diet/sliced-peaches.jpg">
+            <ion-card-header>
+              <ion-card-title>Peaches</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Peaches pack lutein and zeaxanthin, powerful ca...
+              <a class="learn-more-link" (click)="peachesModal()">Read More<ion-icon name="chevron-forward-outline"></ion-icon></a>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <img src="/assets/images/diet/strawberries.jpg">
+            <ion-card-header>
+              <ion-card-title>Strawberries</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Beyond the monster dose of vitamin C (calorie for...
+              <a class="learn-more-link" (click)="strawberriesModal()">Read More<ion-icon name="chevron-forward-outline"></ion-icon></a>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <img src="/assets/images/diet/sliced-pineapples.jpg">
+            <ion-card-header>
+              <ion-card-title>Pineapple</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Feeling low on energy? A cup of pineapple might...
+              <a class="learn-more-link" (click)="pineappleModal()">Read More<ion-icon name="chevron-forward-outline"></ion-icon></a>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <img src="/assets/images/diet/spilled-blueberries.jpg">
+            <ion-card-header>
+              <ion-card-title>Blueberries</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Blueberries are best known in health circles...
+              <a class="learn-more-link" (click)="blueberriesModal()">Read More<ion-icon name="chevron-forward-outline"></ion-icon></a>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </ion-item>
+  </ion-list>
+</ion-content>

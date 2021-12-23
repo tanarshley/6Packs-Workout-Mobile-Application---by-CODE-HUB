@@ -1,0 +1,7 @@
+{
+  "name": "6packs-workout-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

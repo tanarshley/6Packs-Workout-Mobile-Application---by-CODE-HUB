@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-back-outline" defaultHref="/tabs/workout"></ion-back-button>
+    </ion-buttons>
+    <ion-icon slot="end" class="exit-exercise-ico" name="close-outline" (click)="exitExercise()"></ion-icon>
+    <ion-title>Bridges</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+      <img src="/assets/images/workout-gifs/bridges.gif">
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <p><strong>Level:</strong> 1</p>
+            </ion-col>
+            <ion-col>
+              <p><strong>Sets:</strong> 3</p>
+            </ion-col>
+            <ion-col>
+              <p><strong>Repeat:</strong> 10x</p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p><strong>Difficulty:</strong>
+                  <ion-chip color="primary">
+                    <ion-label>Normal</ion-label>
+                  </ion-chip>
+              </p>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <p><strong>Target Body Parts:</strong> Glutes, abs, and hamstrings</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <br>
+        <ion-card-title>
+          <strong>Instructions</strong>
+        </ion-card-title>
+        <ol>
+          <li>Tighten your abdominal and buttock muscles by pushing your low back into the ground.</li>
+          <li>Raise your hips to create a straight line from your knees to your shoulders.</li>
+          <li>Squeeze your core and pull your belly button back toward your spine.</li>
+          <li>Hold for 20 to 30 seconds.</li>
+          <li>Lower the hips to return to the starting position.</li>
+          <li>Repeat the steps correctly until the set is complete.</li>
+        </ol><br>
+        <ion-chip color="secondary" class="time-chip">
+          <ion-label><ion-icon name="time-outline" class="time-icon"></ion-icon> 1-2 minutes rest between sets.</ion-label>
+        </ion-chip><br><br>
+        <ion-label>
+          Progress:
+        </ion-label>
+        <ion-progress-bar value="0.34" buffer="0.51"></ion-progress-bar>
+      </ion-card-content>
+      <ion-button color="success" (click)="nextExercise()" expand="block" mode="ios">Next Exercise</ion-button>
+    </ion-card>
+</ion-content>

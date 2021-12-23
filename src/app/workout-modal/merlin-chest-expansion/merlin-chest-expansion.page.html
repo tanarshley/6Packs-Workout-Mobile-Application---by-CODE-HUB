@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-back-outline" defaultHref="/tabs/workout" (click)="closeModal()"></ion-back-button>
+    </ion-buttons>
+    <ion-icon slot="end" class="exit-exercise-ico" name="close-outline" (click)="exitExercise()"></ion-icon>
+    <ion-title>Chest Expansion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img src="/assets/images/workout-gifs/chest-expansion.gif">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <p><strong>Level:</strong> 1</p>
+          </ion-col>
+          <ion-col>
+            <p><strong>Sets:</strong> 3</p>
+          </ion-col>
+          <ion-col>
+            <p><strong>Repeat:</strong> 20x</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p><strong>Difficulty:</strong>
+                <ion-chip color="success">
+                  <ion-label>Easy</ion-label>
+                </ion-chip>
+             </p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p><strong>Target Body Parts:</strong> Upper back, chest and shoulders</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <br>
+      <ion-card-title>
+        <strong>Instructions</strong>
+      </ion-card-title>
+      <ol>
+        <li>Stand up tall with your feet set at hip width.</li>
+        <li>Raise your straight arms out wide to shoulder height, palms face down.</li>
+        <li>Then, keeping your arms at shoulder height, bring them in, across your body until they cross over each other.</li>
+        <li>From here expand your chest and open your arms back out as wide as you can.</li>
+        <li>Each time you repeat the movement change which arm is on top of the other when they cross over in the middle.</li>
+      </ol><br>
+      <ion-chip color="secondary" class="time-chip">
+        <ion-label><ion-icon name="time-outline" class="time-icon"></ion-icon> 1-2 minutes rest between sets.</ion-label>
+      </ion-chip><br><br>
+      <ion-label>
+        Progress:
+      </ion-label>
+      <ion-progress-bar value="0.00" buffer="0.25"></ion-progress-bar>
+      </ion-card-content>
+      <ion-button color="success" (click)="nextExercise()" expand="block" mode="ios">Next Exercise</ion-button>
+  </ion-card>
+</ion-content>

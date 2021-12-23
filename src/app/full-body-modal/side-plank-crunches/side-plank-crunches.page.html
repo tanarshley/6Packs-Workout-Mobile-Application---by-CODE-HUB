@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-back-outline" defaultHref="/tabs/workout"></ion-back-button>
+    </ion-buttons>
+    <ion-icon slot="end" class="exit-exercise-ico" name="close-outline" (click)="exitExercise()"></ion-icon>
+    <ion-title>Side Plank Crunches</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <img src="/assets/images/workout-gifs/side-plank-crunches.gif">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <p><strong>Level:</strong> 1</p>
+          </ion-col>
+          <ion-col>
+            <p><strong>Sets:</strong> 3</p>
+          </ion-col>
+          <ion-col>
+            <p><strong>Repeat:</strong> 10x</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p><strong>Difficulty:</strong>
+                <ion-chip color="danger">
+                  <ion-label>Hard</ion-label>
+                </ion-chip>
+             </p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <p><strong>Target Body Parts:</strong> Cores, obliques, upper back and shoulder</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <br>
+      <ion-card-title>
+        <strong>Instructions</strong>
+      </ion-card-title>
+      <ol>
+        <li>Upward Phase: Press upwards through your arms while maintaining a rigid torso and head aligned with
+           your spine. As your press upwards, extend your left hip to lift your left foot off the floor, keeping the
+           knee extended.</li>
+        <li>Bring the elbow on your top arm and knee on your top leg in to tap elbow and knee together, then
+          reach both long and repeat the tap working your obliques and entire core with these crunches.</li>
+        <li>Repeat until the set is complete.</li>
+      </ol><br>
+      <ion-chip color="secondary" class="time-chip">
+        <ion-label><ion-icon name="time-outline" class="time-icon"></ion-icon> 1-2 minutes rest between sets.</ion-label>
+      </ion-chip><br><br>
+      <ion-label>
+        Progress:
+      </ion-label>
+      <ion-progress-bar value="0.85" buffer="1"></ion-progress-bar>
+      </ion-card-content>
+      <ion-button color="success" (click)="nextExercise()" expand="block" mode="ios">Exercises Done</ion-button>
+  </ion-card>
+</ion-content>

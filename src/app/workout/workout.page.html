@@ -1,0 +1,286 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Exercises</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="personal-information">
+
+    <ion-segment [(ngModel)]='selectTabs' scrollable="true">
+        <ion-segment-button value="upper">
+          <ion-label class="segment-label">Upper Body</ion-label>
+        </ion-segment-button>
+
+        <ion-segment-button value="lower">
+          <ion-label class="segment-label">Lower Body</ion-label>
+        </ion-segment-button>
+
+        <ion-segment-button value="whole">
+          <ion-label class="segment-label">Full Body</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+
+    <div class="segment-content" *ngIf="selectTabs === 'upper'">
+      <ion-card>
+        <img src="/assets/images/workout/upperbody.png">
+        <ion-card-header>
+          <ion-card-title>MERLIN</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          The Merlin workout helps you create good upper body coordination, dexterity, tendon and
+          muscle conditioning and great range of motion. Add EC and the challenge escalates. <br>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-chip color="success">
+                  <ion-label>Easy</ion-label>
+                </ion-chip>
+              </ion-col>
+              <ion-col>
+                <ion-chip color="success">
+                  <ion-label>Level 1</ion-label>
+                </ion-chip>
+              </ion-col>
+              <ion-col>
+                <ion-button color="primary" (click)="openMerlinModal()">Start</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <img src="/assets/images/workout/upperbody.png">
+        <ion-card-header>
+          <ion-card-title>UPPERBODY</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            The upper body exercise will give you the chance to improve muscle tone, strength and muscular control which
+            is a good basis for aiming for the next level in your fitness journey. <br>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-chip color="secondary">
+                    <ion-label>Normal</ion-label>
+                  </ion-chip>
+                </ion-col>
+                <ion-col>
+                  <ion-chip color="success">
+                    <ion-label>Level 1</ion-label>
+                  </ion-chip>
+                </ion-col>
+                <ion-col>
+                  <ion-button color="primary" (click)="openKneePushModal()">Start</ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <img src="/assets/images/workout/upperbody.png">
+        <ion-card-header>
+          <ion-card-title>RED REAPER</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Chisel your upper-body strength and reinforce your core, become harder
+          to kill with the Red Reaper Workout. Keep your body straight, tighten up your abs,
+          take a deep breath - and dive in! <br>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-chip color="danger">
+                    <ion-label>Hard</ion-label>
+                  </ion-chip>
+                </ion-col>
+                <ion-col>
+                  <ion-chip color="success">
+                    <ion-label>Level 1</ion-label>
+                  </ion-chip>
+                </ion-col>
+                <ion-col>
+                  <ion-button color="primary" (click)="openRedReaper()">Start</ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+
+    <div class="segment-content" *ngIf="selectTabs === 'lower'">
+      <ion-card>
+        <img src="/assets/images/workout/lowerbody.png">
+        <ion-card-header>
+          <ion-card-title>DRACARYS</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Dracarys workout is a primarily lower body workout but doesn't neglect the upper
+          body muscles completely. It will leave you feeling refreshed and ready to face the day ahead.  <br>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-chip color="success">
+                    <ion-label>Easy</ion-label>
+                  </ion-chip>
+                </ion-col>
+                <ion-col>
+                  <ion-chip color="success">
+                    <ion-label>Level 1</ion-label>
+                  </ion-chip>
+                </ion-col>
+                <ion-col>
+                  <ion-button color="primary" (click)="openDracarys()">Start</ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <img src="/assets/images/workout/lowerbody.png">
+        <ion-card-header>
+          <ion-card-title>PIECE OF CAKE</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            Piece of Cake is that workout you go for when getting back into training after a lay-off, starting out
+            on your fitness journey or coming back from injury and testing the water. <br>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-chip color="secondary">
+                    <ion-label>Normal</ion-label>
+                  </ion-chip>
+                </ion-col>
+                <ion-col>
+                  <ion-chip color="success">
+                    <ion-label>Level 1</ion-label>
+                  </ion-chip>
+                </ion-col>
+                <ion-col>
+                  <ion-button color="primary" (click)="openPieceOfCakeModal()">Start</ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <img src="/assets/images/workout/bubble-buttt.JPG">
+        <ion-card-header>
+          <ion-card-title>BUBBLE BUTT</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Bubble Butt is a workout that delivers on all these promises on Glutes. A difficulty Level IV
+          workout this is not suitable for beginners but it should definitely be on your workout horizon. <br>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                  <ion-chip color="danger">
+                    <ion-label>Hard</ion-label>
+                  </ion-chip>
+                </ion-col>
+                <ion-col>
+                  <ion-chip color="danger">
+                    <ion-label>Level 4</ion-label>
+                  </ion-chip>
+                </ion-col>
+                <ion-col>
+                  <ion-button color="primary" (click)="openBubbleButt()">Start</ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <div class="segment-content" *ngIf="selectTabs === 'whole'">
+      <ion-card>
+        <img src="/assets/images/workout/wholebody.png">
+        <ion-card-header>
+          <ion-card-title>FULL BODY WORKS</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Nothing quite works the entire body as this quick workout does.
+          It pushes all the right buttons, activates all the right muscles, has all the right
+          effects in the end and it can still be done in under less time you take for a coffee break.<br>
+           <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-chip color="success">
+                  <ion-label>Easy</ion-label>
+                </ion-chip>
+              </ion-col>
+              <ion-col>
+                <ion-chip color="success">
+                  <ion-label>Level 1</ion-label>
+                </ion-chip>
+              </ion-col>
+              <ion-col>
+                <ion-button color="primary" (click)="openFullBodyWorks()">Start</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <img src="/assets/images/workout/wholebody.png">
+        <ion-card-header>
+          <ion-card-title>3PM WORKOUT</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+           The 3PM Workout targets all the major muscle groups of the body to
+           produce a set of exercises that will make you stronger, sweatier and healthier<br>
+           <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-chip color="secondary">
+                  <ion-label>Normal</ion-label>
+                </ion-chip>
+              </ion-col>
+              <ion-col>
+                <ion-chip color="success">
+                  <ion-label>Level 1</ion-label>
+                </ion-chip>
+              </ion-col>
+              <ion-col>
+                <ion-button color="primary" (click)="openSquatModal()">Start</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <img src="/assets/images/workout/master.JPG">
+        <ion-card-header>
+          <ion-card-title>MASTER OF THE UNIVERSE</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Master Of The Universe can't be anything else than a difficulty Level IV workout.
+          This means that your body will feel the added load from the very first set but you are
+          also more likely to see faster changes take place and feel the transformation. <br>
+           <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-chip color="danger">
+                  <ion-label>Hard</ion-label>
+                </ion-chip>
+              </ion-col>
+              <ion-col>
+                <ion-chip color="success">
+                  <ion-label>Level 1</ion-label>
+                </ion-chip>
+              </ion-col>
+              <ion-col>
+                <ion-button color="primary" (click)="openMasterUniv()">Start</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+     </div>
+  </div>
+</ion-content>

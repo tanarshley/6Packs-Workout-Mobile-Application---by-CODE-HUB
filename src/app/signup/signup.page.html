@@ -1,0 +1,90 @@
+<ion-app>
+ <ion-content>
+  <p class="ion-text-center create">Create Account</p>
+  <form [formGroup]="signupForm" ngNativeValidate (submit)="onSubmit($event)">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Full Name</ion-label>
+        <ion-input type="text" formControlName="fullname"></ion-input>
+      </ion-item>
+
+      <div *ngFor="let error of errormsgs.fullname">
+        <ng-container *ngIf="signupForm.controls['fullname'].errors?.required && signupForm.controls['fullname'].
+        touched">
+          <small class="error-message">{{error.message}}</small>
+        </ng-container>
+      </div>
+      <br>
+
+      <ion-item>
+        <ion-label position="floating">Username</ion-label>
+        <ion-input type="text" formControlName="username"></ion-input>
+      </ion-item>
+
+      <div *ngFor="let error of errormsgs.username">
+        <ng-container *ngIf="username.hasError(error.type) && (username.dirty || username.touched)">
+          <small class="error-message">{{error.message}}</small>
+        </ng-container>
+      </div>
+      <br>
+
+      <ion-item>
+        <ion-label position="floating">Email Address</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+
+      <div *ngFor="let error of errormsgs.email">
+        <ng-container *ngIf="email.hasError(error.type) && (email.dirty || email.touched)">
+          <small class="error-message">{{error.message}}</small>
+        </ng-container>
+      </div>
+      <br>
+
+      <ion-item>
+        <ion-label position="floating">MM/DD/YYYY</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" min="1994-03-14" max="2003-12-31" formControlName="birthdate"></ion-datetime>
+      </ion-item>
+
+      <div *ngFor="let error of errormsgs.birthdate">
+        <ng-container *ngIf="birthdate.hasError(error.type) && (birthdate.dirty || birthdate.touched)">
+          <small class="error-message">{{error.message}}</small>
+        </ng-container>
+      </div>
+      <br>
+
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" formControlName="account_password"></ion-input>
+      </ion-item>
+
+      <div *ngFor="let error of errormsgs.account_password">
+        <ng-container *ngIf="signupForm.controls['account_password'].errors?.required && signupForm.controls['account_password'].
+        touched">
+        <small class="error-message">{{error.message}}</small>
+        </ng-container>
+      </div>
+      <br>
+
+      <ion-item>
+        <ion-label position="floating">Confirm Password</ion-label>
+        <ion-input type="password" formControlName="account_password_confirmation"></ion-input>
+      </ion-item>
+
+      <div *ngFor="let error of errormsgs.account_password_confirmation">
+        <ng-container *ngIf="signupForm.controls['account_password_confirmation'].errors?.required && signupForm.controls['account_password_confirmation'].
+        touched">
+        <small class="error-message">{{error.message}}</small>
+        </ng-container>
+      </div>
+      <br>
+      <ion-checkbox formControlName="TermsAndConditions"></ion-checkbox>&nbsp; <ion-label>Agree to <a (click)="termsConditionsModal()">Terms and Conditions.</a></ion-label>
+      <br>
+      <br>
+      <ion-button type="submit" [attr.disabled]="!signupForm.valid" expand="block" mode="ios">Sign up</ion-button>
+      <br>
+      <ion-label class="login-link">Already have an account? <a [routerLink]="['/login']">Login here.</a></ion-label>
+    </ion-list>
+  </form>
+
+</ion-content>
+</ion-app>

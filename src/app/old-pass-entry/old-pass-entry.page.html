@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button icon="arrow-back-outline" defaultHref="/tabs/home" (click)="closeModal()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>User Verification</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="verifyOldPassForm" ngNativeValidate (submit)="changePassword()">
+    <ion-list>
+
+      <ion-item no-lines class="invisible-item">
+        <ion-label position="floating">Old password</ion-label>
+        <ion-input type="text" formControlName="old_account_password" [disabled]="true" [value]="old_password"></ion-input>
+      </ion-item>
+
+      <div *ngFor="let error of errormsgs.old_account_password">
+        <ng-container *ngIf="verifyOldPassForm.controls['old_account_password'].errors?.required &&
+        verifyOldPassForm.controls['old_account_password'].touched">
+        <small class="error-message">{{error.message}}</small>
+        </ng-container>
+      </div>
+
+      <ion-item>
+        <ion-label position="floating">Old password</ion-label>
+        <ion-input type="password" formControlName="enter_old_password"></ion-input>
+      </ion-item>
+
+      <div *ngFor="let error of errormsgs.enter_old_password">
+        <ng-container *ngIf="verifyOldPassForm.controls['enter_old_password'].errors?.required
+         && verifyOldPassForm.controls['enter_old_password'].touched">
+        <small class="error-message">{{error.message}}</small>
+        </ng-container>
+      </div>
+
+      <ion-button (click)="changePassword()" type="submit" mode="ios" color="success" expand="block">Verify</ion-button>
+    </ion-list>
+  </form>
+</ion-content>
